@@ -1,0 +1,232 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* Menu de navegacion */
+.menuToggle,.menu_open,.menu_close{
+    display: none;
+}
+.menu{
+    display: flex;
+    align-items: center;
+    /* background-color:aquamarine ; */
+    height: 125px;
+    border-bottom: .5px solid  aquamarine ;
+}
+
+.logo{
+    width: 10%;
+}
+
+.logo img{
+    width: 100%;
+    margin: 15px;
+}
+
+.menu nav{
+    width: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+nav .enlace{
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    color: yellowgreen;
+}
+
+/* Main */
+.carrucel{
+    margin: 25px 0 15px 0 ;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.carrucel img{
+    width: 80%;
+}
+
+/* Seccion productos */
+
+.productos{
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.contenedor_articulo{
+    width: 30%;
+}
+.contenedor_articulo a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    color: yellowgreen;
+    border: 1px yellowgreen solid;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+    height: 100%;
+}
+
+.contenedor_articulo a h2{
+    margin: 10px 0 10px 0;
+}
+
+.articulo{
+    width: 100%;
+}
+.promociones{
+    margin: 30px 10% 0 10% ;
+}
+
+.contenedor_productos{
+    margin-top: 60px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Boton ver Mas */
+
+.vermas{
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    color: yellowgreen;
+}
+
+.vermas:hover{
+    border-bottom: 1px solid yellowgreen;
+}
+
+.pie{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(154, 205, 50);
+    height: 55px;
+    padding: 0 10% 0 10%;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.redes{
+    margin-right: 20px;
+}
+
+.redes > img{
+    width: 40px;
+}
+
+.redes_container{
+    display: flex;
+    align-items: center;
+}
+
+.nosotros{
+    margin-right: 90px;
+}
+
+.nosotros,.vision{
+    text-decoration: none;
+    font-family: 'Roboto Mono', monospace;
+    color:antiquewhite;
+}
+
+@media (max-width:768px) {
+    .contenedor_productos{
+        flex-wrap: wrap;
+    }
+    .contenedor_articulo{
+        width: 47%;
+        margin-bottom: 10px;
+    }
+    .logo{
+        width: 100%;
+    }
+    .logo img {
+        width: 80px;
+    }
+    .menu nav{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+        position: relative;
+    }
+    .menuToggle{
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        display: block;
+        width: 30px;
+        height: 35px;
+        z-index: 10;
+        opacity: 0;
+        cursor: pointer;
+    }
+    #menuToggle:checked ~ #menu {
+        display: flex;
+    }
+    .enlace{
+        margin-bottom: 20px;
+    }
+    .menu_close,.menu_open{
+        position: absolute;
+        display: block;
+        width: 30px;
+        top: 10px;
+        right: 10px;
+        color: rgb(154, 205, 50);
+
+    }
+    .menu_close{
+        display: none;
+    }
+    #menuToggle:checked ~ .menu_open {
+        display: none;
+    }
+    #menuToggle:checked ~ .menu_close {
+        display: flex;
+    }
+    .nosotros{
+        margin-right: 20px;
+    }
+    .pie{
+        display: flex;
+        justify-content: space-between;
+        background-color: rgb(154, 205, 50);
+        height: 55px;
+        padding: 0 20px 0 20px;
+        align-items: center;
+        margin-top: 50px;
+    }
+}
+
+@media (max-width:500px) {
+    /* .menu nav{
+        display: none;
+    } */
+    .contenedor_productos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_articulo{
+        width: 80%;
+        margin-bottom: 10px;
+    } 
+    .nosotros{
+        margin-right: 0px;
+    }
+    .redes > img{
+        width: 30px;
+    }
+    .footer_link{
+        display: flex;
+        flex-direction: column;
+    }
+}

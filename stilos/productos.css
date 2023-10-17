@@ -1,0 +1,40 @@
+.contenedor_productos{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.titulo{
+    display: flex;
+    background-color: #ace8f3;
+    justify-content: center;
+    height: 50%;
+}
+.titulo h2{
+    margin: 20px 10px;
+    font-family: 'Dancing Script', cursive;
+    color: yellowgreen;
+    font-size: 50px;
+}
+.contenedor_articulo{
+    width: 15%;
+    margin: 1%; 
+}
+
+@media(max-width:748px){
+    .contenedor_articulo{
+        width: 47%;
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:500px){
+    .contenedor_productos{
+        flex-direction: column;
+        align-items: center;
+    }
+    .contenedor_articulo{
+        width: 80%;
+        margin-bottom: 10px;
+    }
+} 
